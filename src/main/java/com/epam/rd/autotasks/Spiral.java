@@ -15,18 +15,12 @@ class Spiral {
         int maxX = columns - 1;
         int maxY = rows - 1;
         boolean isEdgeFound;
-        int forSwap;
-
-        if (rows == 2 && columns == 1) {    // This is a kludge (crutch) ))
-            spiral[1][0] = 2;
-            return spiral;
-        }
 
         do {
             isEdgeFound = false;
             while ( dx > 0 && x < maxX ||
-                    dy > 0 && y < maxY ||
                     dx < 0 && x > minX ||
+                    dy > 0 && y < maxY ||
                     dy < 0 && y > minY) {
 
                 x += dx;
@@ -41,9 +35,9 @@ class Spiral {
             if (dy > 0) maxY = y - 1;
 
 //  rotate matrix to 90 degree clockwise
-            forSwap = dx;
+            int oldDx = dx;
             dx = -dy;
-            dy = forSwap;
+            dy = oldDx;
         } while (isEdgeFound);
 
         return spiral;
