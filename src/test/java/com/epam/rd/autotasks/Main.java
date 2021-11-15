@@ -3,7 +3,7 @@ package com.epam.rd.autotasks;
 public class Main {
     public static void main(String[] args) {
         {
-            int[][] spiral = Spiral.spiral(3, 4);
+            int[][] spiral = Spiral.spiral(2, 2);
 
             for (int i = 0; i < spiral.length; i++) {
                 for (int j = 0; j < spiral[i].length; j++) {
@@ -13,7 +13,7 @@ public class Main {
             }
         }
         {
-            int[][] spiral = Spiral.spiral(4, 3);
+            int[][] spiral = Spiral.spiral(1, 1);
 
             for (int i = 0; i < spiral.length; i++) {
                 for (int j = 0; j < spiral[i].length; j++) {
@@ -23,7 +23,9 @@ public class Main {
             }
         }
         {
-            int[][] spiral = Spiral.spiral(5, 6);
+            int[][] spiral = Spiral.spiral(1, 2);
+
+
 
             for (int i = 0; i < spiral.length; i++) {
                 for (int j = 0; j < spiral[i].length; j++) {
@@ -33,7 +35,7 @@ public class Main {
             }
         }
         {
-            int[][] spiral = Spiral.spiral(5, 5);
+            int[][] spiral = Spiral.spiral(2, 1);
 
             for (int i = 0; i < spiral.length; i++) {
                 for (int j = 0; j < spiral[i].length; j++) {
@@ -42,5 +44,7 @@ public class Main {
                 System.out.println();
             }
         }
+
+
     }
 }
